@@ -1,7 +1,6 @@
 # README
 
-<!-- Exemple d’utilisation
-Une interaction entre curl et le service de validation pourrait avoir l’air de ceci:
+À faire:
 
 Listing 1: Exemple d’interaction avec le service de validation de ISBN.
 
@@ -9,11 +8,14 @@ Listing 1: Exemple d’interaction avec le service de validation de ISBN.
 HTTP/1.1 200 OK
 Content-Type: application/json; charset=utf-8
 
-{"message":"Le ISBN 9782895406976 est valide."} -->
+{"message":"Le ISBN 9782895406976 est valide."}
 
-To validate your ISBN number type
-curl -i http://service/your-number-here/validate
-in your terminal with the server running.
+-----------------------------------------------------------------------------------------------
+
+Donc, pour valider votre numéro ISBN copier dans le terminal:
+
+curl -i http://service/VOTRE-NUMÉRO-ICI/validate
+
 
 VALID ISBN CODE:
 
