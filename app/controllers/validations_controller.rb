@@ -1,13 +1,13 @@
 class ValidationsController < ApplicationController
   def validate
-    if params[:isbn] =~ /^(978|979)\d{10}$/ && last_num(params[:isbn])
+    if params[:isbn] =~ /^(978|979)\d{10}$/ && last_digit_valid?(params[:isbn])
       render json: { message: "Le ISBN #{params[:isbn]} est valide." }
     else
       render json: { message: "Le ISBN #{params[:isbn]} n'est pas valide." }
     end
   end
 
-  def last_num(isbn)
+  def last_digit_valid?(isbn)
     isbn = isbn.to_s.split('')
     index = 0
     total = 0
